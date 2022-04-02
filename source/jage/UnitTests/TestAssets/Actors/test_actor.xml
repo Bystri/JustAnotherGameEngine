@@ -1,0 +1,11 @@
+<Actor>
+	<FirstTestComponent>
+		<NestedParameters>
+			<Integers x="0" y="1" z="-1"/>
+			<Floats f="3.14"/>
+		</NestedParameters>
+	</FirstTestComponent>
+	<SecondTestComponent>
+		<Parameter p="42"/>
+	</SecondTestComponent>
+</Actor>
