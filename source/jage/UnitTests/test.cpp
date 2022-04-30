@@ -110,3 +110,48 @@ TEST(TestCaseName, TestName) {
 	EXPECT_TRUE(pStrongSecondComponent != nullptr);
 	EXPECT_EQ(pStrongSecondComponent->getParameter(), 42);
 }
+
+#include "../../ResourceCache/ZipFile.h"
+
+TEST(ResourceCache, ZibFile) {
+	ZipFile zipFile;
+
+	bool initialized = zipFile.Init(L"TestAssets/Archives/TestZip.zip");
+	EXPECT_TRUE(initialized);
+
+	int index = zipFile.Find("1.txt");
+	EXPECT_EQ(index, 0);
+	
+	char* buffer = nullptr;
+	buffer = new char[zipFile.GetFileLen(index)];
+	
+	if (buffer) {
+		zipFile.ReadFile(index, buffer);
+	}
+
+	for (int i = 1; i <= 5; ++i) {
+		EXPECT_EQ(buffer[i - 1] - '0', i);
+	}
+
+	zipFile.End();
+}
+
+#include "../ResourceCache/ResCache.h"
+
+TEST(ResourceCache, ResCache) {
+	ResourceZipFile zipFile(L"TestAssets/Archives/TestZip.zip");
+	ResCache resCache(50U, &zipFile);
+
+	bool initialized = resCache.Init();
+	EXPECT_TRUE(initialized);
+
+	Resource resource("1.txt");
+	std::shared_ptr<ResHandle> textRes = resCache.GetHandle(&resource);
+	
+	EXPECT_TRUE(textRes);
+	char* buffer = (char*)textRes->Buffer();
+
+	for (int i = 1; i <= 5; ++i) {
+		EXPECT_EQ(buffer[i - 1] - '0', i);
+	}
+}

@@ -133,12 +133,15 @@
       </SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>Default</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\BystrovI\Projects\jage\source\3rdParty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
       <MapFileName>$(TargetDir)$(TargetName).map</MapFileName>
+      <AdditionalLibraryDirectories>C:\BystrovI\Projects\jage\source\3rdParty\zlib-1.2.12\contrib\vstudio\vc14\x64\ZlibStatDebug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>zlibstat.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
@@ -148,12 +151,15 @@
       </SDLCheck>
       <PreprocessorDefinitions>WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>Default</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\BystrovI\Projects\jage\source\3rdParty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
       <MapFileName>$(TargetDir)$(TargetName).map</MapFileName>
+      <AdditionalLibraryDirectories>C:\BystrovI\Projects\jage\source\3rdParty\zlib-1.2.12\contrib\vstudio\vc14\x64\ZlibStatDebug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>zlibstat.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -165,6 +171,7 @@
       </SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>Default</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\BystrovI\Projects\jage\source\3rdParty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -173,6 +180,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
       <MapFileName>$(TargetDir)$(TargetName).map</MapFileName>
+      <AdditionalLibraryDirectories>C:\BystrovI\Projects\jage\source\3rdParty\zlib-1.2.12\contrib\vstudio\vc14\x64\ZlibStatDebug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>zlibstat.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -182,12 +191,15 @@
       </SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>Default</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\BystrovI\Projects\jage\source\3rdParty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
       <MapFileName>$(TargetDir)$(TargetName).map</MapFileName>
+      <AdditionalLibraryDirectories>C:\BystrovI\Projects\jage\source\3rdParty\zlib-1.2.12\contrib\vstudio\vc14\x64\ZlibStatDebug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>zlibstat.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">
@@ -197,12 +209,15 @@
       </SDLCheck>
       <PreprocessorDefinitions>_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>Default</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\BystrovI\Projects\jage\source\3rdParty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
       <MapFileName>$(TargetDir)$(TargetName).map</MapFileName>
+      <AdditionalLibraryDirectories>C:\BystrovI\Projects\jage\source\3rdParty\zlib-1.2.12\contrib\vstudio\vc14\x64\ZlibStatDebug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>zlibstat.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -214,6 +229,7 @@
       </SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>Default</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\BystrovI\Projects\jage\source\3rdParty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -222,6 +238,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
       <MapFileName>$(TargetDir)$(TargetName).map</MapFileName>
+      <AdditionalLibraryDirectories>C:\BystrovI\Projects\jage\source\3rdParty\zlib-1.2.12\contrib\vstudio\vc14\x64\ZlibStatDebug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>zlibstat.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -230,6 +248,7 @@
     <ClCompile Include="..\..\Actors\ActorFactory.cpp" />
     <ClCompile Include="..\..\Graphics3D\Camera.cpp" />
     <ClCompile Include="..\..\Graphics3D\d3dApp.cpp" />
+    <ClCompile Include="..\..\Graphics3D\d3dRes.cpp" />
     <ClCompile Include="..\..\Graphics3D\d3dUtil.cpp" />
     <ClCompile Include="..\..\Graphics3D\DDSTextureLoader.cpp" />
     <ClCompile Include="..\..\Graphics3D\FrameResource.cpp" />
@@ -239,6 +258,9 @@
     <ClCompile Include="..\..\Mainloop\Initialization.cpp" />
     <ClCompile Include="..\..\Mainloop\Process.cpp" />
     <ClCompile Include="..\..\Mainloop\ProcessManager.cpp" />
+    <ClCompile Include="..\..\ResourceCache\ResCache.cpp" />
+    <ClCompile Include="..\..\ResourceCache\ZipFile.cpp" />
+    <ClCompile Include="..\..\Utilities\String.cpp" />
     <ClCompile Include="JAGE.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -249,6 +271,7 @@
     <ClInclude Include="..\..\Actors\ActorFactory.h" />
     <ClInclude Include="..\..\Graphics3D\Camera.h" />
     <ClInclude Include="..\..\Graphics3D\d3dApp.h" />
+    <ClInclude Include="..\..\Graphics3D\d3dRes.h" />
     <ClInclude Include="..\..\Graphics3D\d3dUtil.h" />
     <ClInclude Include="..\..\Graphics3D\d3dx12.h" />
     <ClInclude Include="..\..\Graphics3D\DDSTextureLoader.h" />
@@ -260,6 +283,9 @@
     <ClInclude Include="..\..\Mainloop\Initialization.h" />
     <ClInclude Include="..\..\Mainloop\Process.h" />
     <ClInclude Include="..\..\Mainloop\ProcessManager.h" />
+    <ClInclude Include="..\..\ResourceCache\ResCache.h" />
+    <ClInclude Include="..\..\ResourceCache\ZipFile.h" />
+    <ClInclude Include="..\..\Utilities\String.h" />
     <ClInclude Include="JAGE.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

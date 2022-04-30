@@ -1,6 +1,6 @@
 #include "Process.h"
 
-#include <stdexcept>
+#include <cassert>
 
 Process::Process()
 	: m_state(UNINITIALIZED)
@@ -15,15 +15,13 @@ Process::~Process() {
 }
 
 inline void Process::Succeed() {
-	if (m_state != RUNNING && m_state != PAUSED)
-		throw std::runtime_error("Secceed on a wrong process");
+	assert(m_state == RUNNING && m_state == PAUSED);
 
 	m_state = SUCCEEDED;
 }
 
 inline void Process::Fail() {
-	if (m_state != RUNNING && m_state != PAUSED)
-		throw std::runtime_error("Fail on a wrong process");
+	assert(m_state == RUNNING && m_state == PAUSED);
 
 	m_state = FAILED;
 }
@@ -40,7 +38,7 @@ inline void Process::Pause() {
 
 inline void Process::UnPause() {
 	if (m_state == PAUSED) {
-		m_state == RUNNING;
+		m_state = RUNNING;
 	}
 	/*else {
 	*	TODO: THROW WARNING ("Try to unpause active process")

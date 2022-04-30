@@ -13,6 +13,9 @@
 #include "GameTimer.h"
 #include "../Mainloop/Initialization.h"
 
+#include "../ResourceCache/ResCache.h"
+#include "d3dRes.h"
+
 // Link necessary d3d12 libraries.
 #pragma comment(lib,"d3dcompiler.lib")
 #pragma comment(lib, "D3D12.lib")
@@ -132,5 +135,8 @@ protected:
     DXGI_FORMAT m_DepthStencilFormat = DXGI_FORMAT_D24_UNORM_S8_UINT;
 	int m_ClientWidth = 800;
 	int m_ClientHeight = 600;
+
+    //Game Engine stuff
+    ResCache* m_ResCache;
 };
 

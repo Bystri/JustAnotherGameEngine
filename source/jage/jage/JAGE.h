@@ -5,6 +5,7 @@
 #include "../../Graphics3D/UploadBuffer.h"
 #include "../../Graphics3D/FrameResource.h"
 #include "../../Graphics3D/GeometryGenerator.h"
+#include "../../Graphics3D/Camera.h"
 
 #pragma comment(lib, "d3dcompiler.lib")
 #pragma comment(lib, "D3D12.lib")
@@ -42,13 +43,11 @@ private:
 	virtual void OnMouseMove(WPARAM btnState, int x, int y)override;
 
 	void OnKeyboardInput(const GameTimer& gt);
-	void UpdateCamera(const GameTimer& gt);
 	void AnimateMaterials(const GameTimer& gt);
 	void UpdateObjectCBs(const GameTimer& gt);
-	void UpdateMaterialCBs(const GameTimer& gt);
+	void UpdateMaterialBuffer(const GameTimer& gt);
 	void UpdateMainPassCB(const GameTimer& gt);
 
-	void LoadTextures();
 	void BuildRootSignature();
 	void BuildDescriptorHeaps();
 	void BuildShadersAndInputLayout();
@@ -73,7 +72,6 @@ private:
 
 	std::unordered_map<std::string, std::unique_ptr<MeshGeometry>> m_Geometries;
 	std::unordered_map<std::string, std::unique_ptr<Material>> m_Materials;
-	std::unordered_map<std::string, std::unique_ptr<Texture>> m_Textures;
 	std::unordered_map<std::string, Microsoft::WRL::ComPtr<ID3DBlob>> m_Shaders;
 	std::unordered_map<std::string, Microsoft::WRL::ComPtr<ID3D12PipelineState>> m_PSOs;
 
@@ -85,15 +83,13 @@ private:
 	// Render items divided by PSO.
 	std::vector<RenderItem*> m_RitemLayer[(int)RenderLayer::Count];
 
+	bool m_FrustumCullingEnabled = true;
+
+	DirectX::BoundingFrustum m_CamFrustum;
+
 	PassConstants m_MainPassCB;
 
-	DirectX::XMFLOAT3 m_EyePos = { 0.0f, 0.0f, 0.0f };
-	DirectX::XMFLOAT4X4 m_View = MathHelper::Identity4x4();
-	DirectX::XMFLOAT4X4 m_Proj = MathHelper::Identity4x4();
-
-	float m_Theta = 1.5f * DirectX::XM_PI;
-	float m_Phi = 0.2f * DirectX::XM_PI;
-	float m_Radius = 15.0f;
+	Camera m_Camera;
 
 	POINT m_LastMousePos;
 };

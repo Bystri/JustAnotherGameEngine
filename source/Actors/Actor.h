@@ -4,7 +4,7 @@
 #include <memory>
 
 #include "ActorComponent.h"
-#include "../3rdParty/TinyXML2/tinyxml2.h"
+#include "TinyXML2/tinyxml2.h"
 
 
 class Actor;

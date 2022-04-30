@@ -9,8 +9,17 @@
     <ClCompile Include="..\..\Actors\ActorFactory.cpp">
       <Filter>Actors</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\ResourceCache\ZipFile.cpp">
+      <Filter>ResourceCache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ResourceCache\ResCache.cpp">
+      <Filter>ResourceCache</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\3rdParty\TinyXML2\tinyxml2.cpp">
       <Filter>3rdParty\TinyXML2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Utilities\String.cpp">
+      <Filter>Utilities</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -24,19 +33,37 @@
     <ClInclude Include="..\..\Actors\ActorFactory.h">
       <Filter>Actors</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\ResourceCache\ZipFile.h">
+      <Filter>ResourceCache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ResourceCache\ResCache.h">
+      <Filter>ResourceCache</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\3rdParty\TinyXML2\tinyxml2.h">
       <Filter>3rdParty\TinyXML2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Utilities\String.h">
+      <Filter>Utilities</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Actors">
       <UniqueIdentifier>{28590689-d8e7-4a19-a969-30747ed8a862}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ResourceCache">
+      <UniqueIdentifier>{063d630b-5475-40c4-8743-ca7be8a0a8d5}</UniqueIdentifier>
+    </Filter>
     <Filter Include="3rdParty">
-      <UniqueIdentifier>{76acafbd-c699-4015-b434-ee08d8a8e79d}</UniqueIdentifier>
+      <UniqueIdentifier>{fab2a539-c8d7-4c0f-ab65-5b3a52c26ed9}</UniqueIdentifier>
     </Filter>
     <Filter Include="3rdParty\TinyXML2">
-      <UniqueIdentifier>{e1724d80-fb9e-4c4b-8632-4de093ac54ba}</UniqueIdentifier>
+      <UniqueIdentifier>{b59db3dc-0f22-4f72-ad49-a5a3aa820338}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Utilities">
+      <UniqueIdentifier>{622ec5aa-f29c-4be8-9ba4-6d586d8ad7df}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

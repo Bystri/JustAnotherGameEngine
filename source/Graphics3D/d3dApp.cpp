@@ -28,7 +28,8 @@ D3DApp* D3DApp::GetApp()
 }
 
 D3DApp::D3DApp(HINSTANCE hInstance)
-:	m_hAppInst(hInstance)
+	: m_hAppInst(hInstance)
+	, m_ResCache(nullptr)
 {
     // Only one D3DApp can be constructed.
     assert(m_App == nullptr);
@@ -127,6 +128,13 @@ bool D3DApp::Initialize()
 	}
 
 	/***Init Resource cache***/
+	std::shared_ptr<IResourceFile> zipFile = std::make_shared<ResourceZipFile>(L"Assets.zip");
+	m_ResCache = new ResCache(50, zipFile);
+
+	if (!m_ResCache->Init()) {
+		std::cerr << "Failed to initialize resource cache!\n";
+		return false;
+	}
 
 	/***Load Text Strings***/
 
@@ -141,6 +149,9 @@ bool D3DApp::Initialize()
 
 	if(!InitDirect3D())
 		return false;
+
+	//We register texture loader right after InitDirect3D because Device and CommandList initialized there
+	m_ResCache->RegisterLoader(std::make_shared<TextureResourceLoader>(m_d3dDevice, m_CommandList));
 
 	/***Init GameLogic and Game View***/
 	_tcscpy_s(m_saveGameDirectory, GetSaveGameDirectory(m_hMainWnd, GAME_APP_DIRECTORY));
@@ -418,7 +429,13 @@ LRESULT D3DApp::OnClose()
 	/***Destroy Event Manager***/
 	/***Destroy Script Registr***/
 	/***Destroy Lua***/
+
 	/***Destroy ResCache***/
+	if (m_ResCache) {
+		delete m_ResCache;
+		m_ResCache = nullptr;
+	}
+
 	return 0;
 }
 

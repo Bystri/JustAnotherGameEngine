@@ -16,17 +16,23 @@
     <Filter Include="Actors">
       <UniqueIdentifier>{023abab6-e862-44f9-9dd2-3eaef52bc52f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="3rdParty">
-      <UniqueIdentifier>{c0624a8b-2d70-41d5-b938-f436cae6a114}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="3rdParty\TinyXML2">
-      <UniqueIdentifier>{506d07ab-8cbc-4bc1-a493-9fe626f095e0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Graphics3D">
       <UniqueIdentifier>{0279356f-e1a1-4e2c-9139-e389fa4a770b}</UniqueIdentifier>
     </Filter>
     <Filter Include="Mainloop">
       <UniqueIdentifier>{d3c93ec1-9017-4dbd-95e6-385406e5d859}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ResourceCache">
+      <UniqueIdentifier>{61b41579-0051-4257-8752-15b1497139b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities">
+      <UniqueIdentifier>{76e8cf56-d679-4835-a82b-bc40400fd8d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty">
+      <UniqueIdentifier>{7feb62a9-1150-41ed-adfe-801f1f44db85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\TinyXML2">
+      <UniqueIdentifier>{1807afe8-4455-4056-9d8b-078ff59c4a17}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -38,9 +44,6 @@
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\3rdParty\TinyXML2\tinyxml2.cpp">
-      <Filter>3rdParty\TinyXML2</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Graphics3D\Camera.cpp">
       <Filter>Graphics3D</Filter>
@@ -78,6 +81,21 @@
     <ClCompile Include="..\..\Mainloop\ProcessManager.cpp">
       <Filter>Mainloop</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\ResourceCache\ZipFile.cpp">
+      <Filter>ResourceCache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ResourceCache\ResCache.cpp">
+      <Filter>ResourceCache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Utilities\String.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\TinyXML2\tinyxml2.cpp">
+      <Filter>3rdParty\TinyXML2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Graphics3D\d3dRes.cpp">
+      <Filter>Graphics3D</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Actors\Actor.h">
@@ -88,9 +106,6 @@
     </ClInclude>
     <ClInclude Include="..\..\Actors\ActorFactory.h">
       <Filter>Actors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\3rdParty\TinyXML2\tinyxml2.h">
-      <Filter>3rdParty\TinyXML2</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Graphics3D\Camera.h">
       <Filter>Graphics3D</Filter>
@@ -133,6 +148,21 @@
     </ClInclude>
     <ClInclude Include="..\..\Mainloop\ProcessManager.h">
       <Filter>Mainloop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ResourceCache\ZipFile.h">
+      <Filter>ResourceCache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ResourceCache\ResCache.h">
+      <Filter>ResourceCache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Utilities\String.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\TinyXML2\tinyxml2.h">
+      <Filter>3rdParty\TinyXML2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Graphics3D\d3dRes.h">
+      <Filter>Graphics3D</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
